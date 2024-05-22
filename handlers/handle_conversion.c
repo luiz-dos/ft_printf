@@ -30,9 +30,4 @@ void	handle_conversion(t_str *data, t_data_format *data_f)
 		data_f->cspecs->x = B_TRUE;
 	else if (data->str[data->pos] == 'X')
 		data_f->cspecs->upper_x = B_TRUE;
-	else
-	{
-		ft_putendl_fd("Invalid specifier", 1);
-		return ;
-	}
 }
