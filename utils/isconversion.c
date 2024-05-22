@@ -15,7 +15,7 @@
 t_bool	isconversion(char c)
 {
 	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i' || c == 'u'
-		|| c == 'x' || c == 'X' || c == 'o')
+		|| c == 'x' || c == 'X')
 		return (B_TRUE);
 	return (B_FALSE);
 }
