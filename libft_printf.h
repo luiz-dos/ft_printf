@@ -21,11 +21,11 @@
 typedef int				t_bool;
 
 /* named constants */
-typedef enum e_bool
+enum 
 {
-	B_TRUE = 1,
 	B_FALSE = 0,
-}						t_boolean;
+	B_TRUE = 1
+};
 
 /* flags bonus */
 typedef struct s_flags
