@@ -40,6 +40,8 @@ int	ft_printf(const char *format, ...)
 	va_list	args;
 	int		bytes;
 
+	if (!format)
+		return (-1);
 	va_start(args, format);
 	data = (t_str *)malloc(sizeof(t_str));
 	if (!data)
