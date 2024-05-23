@@ -20,7 +20,7 @@ void	putchar_byte(t_str *data)
 
 void	ft_printf_two(t_str *data, va_list args)
 {
-	while (data->str[++data->pos])
+	while (data->str[++data->pos] && !data->error)
 	{
 		if (data->str[data->pos] == '%' && !data->str[data->pos + 1])
 			;
@@ -49,6 +49,7 @@ int	ft_printf(const char *format, ...)
 	data->pos = -1;
 	data->bytes = 0;
 	data->str = format;
+	data->error = B_FALSE;
 	ft_printf_two(data, args);
 	bytes = data->bytes;
 	va_end(args);
