@@ -7,6 +7,13 @@ int main(void)
     int                     a;
     int                     bola;
 
+    ft_printf("\n Testing NULL as format \n");
+    
+    a = ft_printf(NULL);
+    bola = printf(NULL);
+    ft_printf("Bytes mylib_printf: %d\n", a);
+    printf("Bytes stdio_printf: %d\n", bola);
+
     ft_printf("\n Character Tests \n");
 
     char c = 'k';
