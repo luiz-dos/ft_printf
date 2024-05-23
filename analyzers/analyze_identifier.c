@@ -6,7 +6,7 @@
 /*   By: luiz-dos <luiz-dos@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:20:36 by luiz-dos          #+#    #+#             */
-/*   Updated: 2024/05/20 16:20:48 by luiz-dos         ###   ########.fr       */
+/*   Updated: 2024/05/23 12:36:41 by luiz-dos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ void	analyze_identifier(t_str *data, va_list args)
 	{
 		handle_conversion(data, data_f);
 		print_specifier(data, data_f, args);
+	}
+	else
+	{
+		ft_putstr_fd("Invalid specifier\n", 1);
+		data->error = B_TRUE;
 	}
 	free(data_f->cspecs);
 	free(data_f->flags);
