@@ -68,6 +68,7 @@ typedef struct s_str
 	int					pos;
 	int					bytes;
 	const char			*str;
+	t_bool					error;
 }						t_str;
 
 /* node */
